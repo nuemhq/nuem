@@ -1,0 +1,27 @@
+name: nuem
+version: 0.1.0
+
+authors:
+  - straw <acoolstraw@protonmail.com>
+
+targets:
+  nuem:
+    main: src/nuem.cr
+
+dependencies: 
+  grip:
+    github: grip-framework/grip
+  kemal:
+    github: kemalcr/kemal
+  crystal-argon2:
+    github: Axentro/crystal-argon2
+  rethinkdb:
+    github: kingsleyh/crystal-rethinkdb
+  granite:
+    github: amberframework/granite
+  sqlite3:
+    github: crystal-lang/crystal-sqlite3
+
+crystal: 1.2.1
+
+license: MIT

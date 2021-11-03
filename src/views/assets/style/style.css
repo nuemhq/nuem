@@ -1,0 +1,147 @@
+/* colors and basics */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	/* UI colors */
+	--bg: #0a0a0a;
+	--bg-l: #1a1a1a;
+	--bg-d: #000;
+	--fg: #d6d6d6;
+	--fg-l: #fff;
+	--fg-d: #c4c4c4;
+	/* Bonus Region Colors */
+	--red-bonus: #C24446;
+	--orange-bonus: #C47845;
+	--yellow-bonus: #C4A845;
+	--green-bonus: #76b457;
+	--blue-bonus: #50a9b3;
+	--navy-bonus: #51528f;
+	--pink-bonus: #C44592;
+	/* Player & Misc Colors */
+	--dark-rose-pm: #A55F60;
+	--pinnoto-pm: #BF1537;
+	--red-pm: #E93739;
+	--orange-pm: #F26D38;
+	--gold-pm: #E29D2A;
+	--yellow-pm: #FFD148;
+	--lime-pm: #B1D437;
+	--green-pm: #59BA27;
+	--dark-green-pm: #376E1B;
+	--aquamarine-pm: #3fa06c;
+	--electric-pm: #59E4CB;
+	--aqua-pm: #3CCBE8;
+	--blue-pm: #2B90E4;
+	--navy-pm: #3455C7;
+	--purple-pm: #723AE2;
+	--magenta-pm: #B25FC9;
+	--pink-pm: #E14697;
+	--lobster-pm: #E83D6C;
+}
+
+/* general element styling */
+
+body {
+	background-color: var(--bg);
+	color: var(--fg);
+	font-family: 'Inter', sans-serif;
+	margin: 0;
+}
+
+h1 {
+	line-height: 1.5px;
+}
+
+/* buttons and ui elements */
+
+.btn {
+	display: inline-block;
+	border: 1px solid var(--fg);
+	text-decoration: none;
+	font-size: 22px;
+	color: var(--fg);
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	min-width: 120px;
+}
+
+/* nav class */
+
+.nav {
+	display: flex;
+	flex-direction: row;
+	height: 50px;
+	align-items: center;
+	width: 100%;
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 15px;
+}
+
+.nav h1 {
+	font-size: 32px;
+	margin-left: 15px;
+	font-weight: 500;
+}
+
+.nav .menu {
+	width: 100%;
+	text-align: right;
+
+}
+
+.nav a {
+	text-decoration: none;
+	color: var(--fg-d);
+	font-size: 18px;
+	padding-right: 15px;
+}
+
+.nav a:hover {
+	color: var(--fg-l);
+}
+
+/* content class */
+
+.content {
+	display: flex;
+	flex-direction: row;
+}
+
+/* index.html */
+
+.hero {
+	text-align: center;
+	margin-top: 10rem
+}
+
+.hero h1 {
+	margin-bottom: 50px;
+}
+
+.code-input {
+	background-color: rgba(0,0,0,0);
+	border: none;
+	border-bottom: 1px solid var(--fg-d);
+	color: var(--fg-d);
+	width: 200px;
+	font-size: 22px;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 50px;
+	margin-left: 10px;
+}
+
+.code-input:focus {
+	outline: none;
+	border-bottom: 1px solid var(--fg-l);
+}
+
+.room-code-styling {
+	font-size: 22px;
+}
