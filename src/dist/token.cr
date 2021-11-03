@@ -4,7 +4,7 @@ class TokenAuthorization
   def call(context : HTTP::Server::Context) : HTTP::Server::Context
     begin
       token = context
-        .get_req_header(Authorization)
+        .get_req_header("Authorization")
         .split("Bearer ")
         .last
         

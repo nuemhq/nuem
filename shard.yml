@@ -9,6 +9,8 @@ targets:
     main: src/nuem.cr
 
 dependencies: 
+  jwt:
+    github: crystal-community/jwt
   grip:
     github: grip-framework/grip
   crystal-argon2:

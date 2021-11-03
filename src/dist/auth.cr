@@ -1,4 +1,4 @@
-require "../models/user.cr"
+require "./db.cr"
 
 class AuthController < Grip::Controllers::Http
 
@@ -10,7 +10,7 @@ class AuthController < Grip::Controllers::Http
     email = params["email"]?
     color = params["color"]?
     
-    if username && email && password
+    if username && email && password && color
       db_username = User.find_by(username: username)
       db_email = User.find_by(email: email)
       
@@ -26,7 +26,7 @@ class AuthController < Grip::Controllers::Http
         user.username = username.to_s
         user.email = email.to_s
         user.password = hasher.create(password.to_s)
-        user.color_preference = color.to_i
+        user.color_preference = color.to_s.to_i
         user.created_at = Time.utc
         user.save
         

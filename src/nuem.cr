@@ -1,9 +1,10 @@
+require "jwt"
 require "grip"
-require "kemal"
-require "crystal-argon2"
 require "rethinkdb"
+require "crystal-argon2"
 
 require "./dist/*"
+
 module Nuem::Core
   VERSION = "1"
 
