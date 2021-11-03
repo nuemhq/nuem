@@ -3,10 +3,7 @@ require "kemal"
 require "crystal-argon2"
 require "rethinkdb"
 
-require "./models/*"
-require "./middleware/*"
-require "./controllers/*"
-
+require "./dist/*"
 module Nuem::Core
   VERSION = "1"
 
@@ -36,12 +33,4 @@ module Nuem::Core
   
   app = Application.new
   app.run
-end
-
-module Nuem::Ui
-  get "/" do
-    render
-  end
-
-  Kemal.run
 end

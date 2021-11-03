@@ -11,8 +11,6 @@ targets:
 dependencies: 
   grip:
     github: grip-framework/grip
-  kemal:
-    github: kemalcr/kemal
   crystal-argon2:
     github: Axentro/crystal-argon2
   rethinkdb:
@@ -24,4 +22,4 @@ dependencies:
 
 crystal: 1.2.1
 
-license: MIT
+license: GPL-3.0
