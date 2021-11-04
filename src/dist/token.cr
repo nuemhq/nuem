@@ -8,13 +8,14 @@ class TokenAuthorization
         .split("Bearer ")
         .last
         
-      payload = JWT.decode(token, ENV["NUEM_SECRET"], JWT::Algorithm::HS512)
+      payload, header = JWT.decode(token, ENV["NUEM_SECRET"], JWT::Algorithm::HS512)
       
       context
     rescue
       context
         .put_status(403)
         .json({message: "Authentication error"})
+        .halt
     end
   end
 end

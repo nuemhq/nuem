@@ -22,6 +22,7 @@ module Nuem::Core
         post "/register", AuthController, as: register
         post "/login", AuthController, as: login
         pipe_through :jwt_auth
+        get "/userinfo", AuthController, as: userinfo
       end
       
     end

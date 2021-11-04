@@ -6,10 +6,15 @@
 	box-sizing: border-box;
 }
 
+p {
+	font-size: 18px;
+}
+
 :root {
 	/* UI colors */
 	--bg: #0a0a0a;
-	--bg-l: #1a1a1a;
+	--bg-l: #2f2f31;
+	--bg-ll: #363638;
 	--bg-d: #000;
 	--fg: #d6d6d6;
 	--fg-l: #fff;
@@ -29,15 +34,15 @@
 	--orange-pm: #F26D38;
 	--gold-pm: #E29D2A;
 	--yellow-pm: #FFD148;
-	--lime-pm: #B1D437;
+	--lime-pm: #b5d34a;
 	--green-pm: #59BA27;
 	--dark-green-pm: #376E1B;
 	--turquoise-pm: #3fa06c;
-	--electric-pm: #59E4CB;
-	--aqua-pm: #3CCBE8;
+	--electric-pm: #69ecd4;
+	--aqua-pm: #5ED7F0;
 	--blue-pm: #2B90E4;
-	--navy-pm: #3455C7;
-	--purple-pm: #723AE2;
+	--navy-pm: #2648B6;
+	--purple-pm: #6836CA;
 	--magenta-pm: #B25FC9;
 	--pink-pm: #E14697;
 	--lobster-pm: #E83D5A;
@@ -68,6 +73,12 @@ h1 {
 	padding-left: 20px;
 	padding-right: 20px;
 	min-width: 120px;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: var(--fg-d);
+	color: var(--bg);
 }
 
 /* nav class */
@@ -83,23 +94,22 @@ h1 {
 	padding-right: 15px;
 }
 
+.nav a {
+	text-decoration: none;
+	color: var(--fg-d);
+	font-size: 18px;
+	padding-right: 15px;
+}
+
 .nav h1 {
 	font-size: 32px;
 	margin-left: 15px;
-	font-weight: 500;
 }
 
 .nav .menu {
 	width: 100%;
 	text-align: right;
 
-}
-
-.nav a {
-	text-decoration: none;
-	color: var(--fg-d);
-	font-size: 18px;
-	padding-right: 15px;
 }
 
 .nav a:hover {
@@ -117,7 +127,7 @@ h1 {
 
 .hero {
 	text-align: center;
-	margin-top: 10rem
+	margin-top: 10rem;
 }
 
 .hero h1 {
@@ -148,11 +158,76 @@ h1 {
 
 /* signup page */
 .auth-box {
-	
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	margin-top: 5rem;
+}
+
+.auth-box .login, .auth-box .signup {
+	display: flex;
+	flex-direction: column;
+	margin: 50px;
+}
+
+.auth-box .login h1, .auth-box .signup h1 {
+	margin-bottom: 50px;
+	text-align: left;
+}
+
+.auth-box .text-input {
+	margin-bottom: 15px;
+}
+
+.auth-box .btn {
+	margin-top: 25px;
+}
+
+.text-input {
+	background-color: rgba(0,0,0,0);
+	border: none;
+	border-bottom: 1px solid var(--fg-d);
+	color: var(--fg-d);
+	width: 100%;
+	font-size: 18px;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 40px;
+}
+
+.text-input:focus {
+	outline: none;
+	border-bottom: 2px solid var(--fg-d);
 }
 
 /* color preference thing */
 
 .colors {
-width: 
+	width: 20rem;
+	display: flex;
+	flex-direction: column;
+	height: 150px;
+	overflow-y: scroll;
+	margin-top: 10px;
+}
+
+.color {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 30px;
+	padding-left: 5px;
+}
+
+.color:hover {
+	background-color: var(--bg-l)
+}
+
+.selected {
+	background-color: var(--bg-ll)
+}
+
+.color p {
+	font-size: 18px;
+	margin-left: 10px;
 }
